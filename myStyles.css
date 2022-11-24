@@ -1,0 +1,149 @@
+/* Import two Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Work+Sans:wght@300;400&display=swap');
+
+/* Create global variables for values that would be reused such as colors, font-families*/
+:root {
+    --rich-black: #0E1F2F;
+    --gun-grey: rgb(122, 124, 131);
+    --gable-green: #1B2D3C;
+    --light-color: #F4EDEA;
+    --light-blue: #335571;
+    --font-serif: 'Times New Roman','Playfair Display', serif;
+    --font-sansserif: 'Work Sans', sans-serif;
+  }
+
+/* BODY TAG: set bg color, remove any margins/padding , and set box sizing to border box to add padding and border to the width and height of an element  */
+body {
+    background-color: var(--rich-black);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER AND FOOTER TAG: set background color and padding */
+header, footer {
+    background-color: var(--gable-green);
+    padding: 20px;
+}
+
+/* H1,H2, H3 TAG: make all headings italic(easier to set all italic in CSS rather than adding <em> in HTML). Set font family and text color */
+h1, h2, h3 {
+    font-style: italic;
+    font-family: var(--font-serif);
+    color: var(--light-color);
+}
+
+/* Set font family, text color and line height to everything other than headings that we have included in the HTML */
+p, li, figcaption, a {
+    font-family: var(--font-sansserif);
+    color: var(--light-color);
+    line-height: 1.5;
+}
+
+/* Set text align to center on every tag that has the class center */
+.center {
+    text-align: center;
+}
+
+/* NAVBAR */
+
+/* Change the unordered list to display horizontally and in the middle of the page */
+.navbar ul {
+    display: flex;
+    justify-content: center;
+}
+
+/* Remove any styling the list has */
+.navbar ul li {
+    list-style: none;
+}
+
+/* Remove any styling the anchor tags have, and add a padding in-between/above/below of the words */
+.navbar ul li a {
+    text-decoration: none;
+    padding: 10px 30px;
+}
+/* NAVBAR END */
+
+
+/* INTRO SECTION*/
+
+/* Change the size of the h1 tag */
+h1 {
+    font-size: 34px;
+}
+
+/* Add space between the navbar and intro section */
+.intro {
+    padding-top: 4em;
+}
+
+/* Set the size of the image and add space before and after the image */
+img{
+    padding-top: 2em;
+    padding-bottom: 0.5em;
+    width: 80%;
+}
+
+/* Change the text color of the caption for the image */
+figcaption {
+    color: var(--light-blue);
+}
+/* INTRO SECTION END */
+
+
+/* ARTICLE styling */
+
+/* Main: set a left-right margin for everything that is included inside the main tag. */
+main {
+    margin: 0 15%;
+}
+
+/* Add a top and bottom padding to the biography part and set a maximum width not to exceed */
+.bio {
+    padding: 5em 0em;
+    max-width: 1300px;
+}
+
+/* Aside: Move aside to the right side, set a width and a minimum width when screen size gets smaller. Set a margin left so the aside never touches the timeline part */
+aside {
+    width: 20%;
+    min-width: 150px;
+    float: right;
+    margin-left: 2em;
+}
+
+/* Override h3 text color to something less vibrant, but lighter than the aside p tag color */
+h3{
+    color: rgb(160, 163, 177);
+}
+
+/* Override line height for the aside p tag, set style to italic and override text color to grey */
+aside p {
+    line-height: 2.5;
+    font-style: italic;
+    color: var(--gun-grey);
+}
+
+/* set width and minimum width of timeline section */
+.timeline{
+    width: 60%;
+    min-width: 250px;
+}
+/* ARTICLE END */
+
+
+/* FOOTER styling */
+
+/* Override the text color of the p tag with class email and change the font size to be smaller */
+.email{
+    color: var(--light-blue);
+    font-size: 16px;
+}
+
+/* Add border styling and padding to the span tag with class border */
+.border {
+    border: 1px var(--light-blue) solid;
+    padding: 0.5em 1em;
+}
+/* FOOTER END */
